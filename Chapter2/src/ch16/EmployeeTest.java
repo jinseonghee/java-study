@@ -15,5 +15,6 @@ public class EmployeeTest {
 
         System.out.println(employeeLee.serialNum);
         System.out.println(employeeKim.serialNum); //serialNum을 kim 만 적용시켰는데, 둘다 증가 된건 두개의 인스턴스가 하나의 메모리를 공유하기 때문이다.
+        
     }
 }
