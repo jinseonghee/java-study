@@ -1,4 +1,4 @@
-package ch03;
+package ch04;
 
 public class VIPCustomer extends Customer {
 
@@ -21,9 +21,15 @@ public class VIPCustomer extends Customer {
         bonusRatio = 0.05;
         salesRatio = 0.1;
         customerGrade = "VIP";
-
-        System.out.println("VIPCustomer(int, String) call");
     }
+
+    @Override
+    public int calcPrice(int price) { // Customer 클래스의 메서드를 오버라이딩 시켜준거기 때문에, 메서드의 이름이나 매개변수의 타입과 개수,반환값이 같지 않으면 오류
+        bonusPoint += price * bonusRatio;
+        price -= (int)(price * salesRatio);
+        return price;
+    }
+
     public String getAgentID() {
         return agentID;
     }

@@ -1,4 +1,4 @@
-package ch03;
+package ch04;
 
 public class Customer {
 
@@ -23,7 +23,6 @@ public class Customer {
         customerGrade = "SILVER";
         bonusRatio = 0.01;
 
-        System.out.println("Customer(int, Strings) call");
     }
 
     public int calcPrice(int price) {
