@@ -17,12 +17,12 @@ public class MyLinkedList {
 
         if(head == null) { // head가 null이면 처음 시작이라는 말이니까 newNode로 설정
             newNode = new MyListNode(data);
-            head = newNode;
+            head = newNode; //맨 앞에 추가
         } else {
             newNode = new MyListNode(data);
             MyListNode temp = head;
             while (temp.next != null) {
-                temp = temp.next;
+                temp = temp.next; //맨 뒤에 추가
             }
             temp.next = newNode;
         }
