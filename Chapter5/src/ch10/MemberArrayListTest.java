@@ -19,6 +19,5 @@ public class MemberArrayListTest {
         memberArrayList.showAllMember(); // 들어간 순서 그대로 나온다.
         memberArrayList.removeMember(memberKim.getMemberId()); // 중간에 빠져도 배열의 순서는 그대로 유지된다.
         memberArrayList.showAllMember();
-
     }
 }
