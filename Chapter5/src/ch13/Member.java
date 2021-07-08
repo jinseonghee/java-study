@@ -55,6 +55,12 @@ public class Member implements Comparator<Member> { //작은 아이디 부터 �
         return memberName + " 회원님의 아이디는 " + memberId + "입니다";
     }
 
+    @Override
+    public int compare(Member member1, Member member2) { //CompareTo는 매개변수가 하나여서 나랑 비교 / compare은 매개변수 2개가 넘어와 하나는 나, 하나는 비교대상이다.
+        return (member1.memberId - member2.memberId); //앞에꺼에서 뒤에껄 뺀게 더 크다 (올림차순)
+        //return (member2.memberId - member1.memberId); // 내림차순
+    }
+}
     /*
     @Override
     public int compareTo(Member member) {
@@ -76,9 +82,3 @@ public class Member implements Comparator<Member> { //작은 아이디 부터 �
         } // 이렇게 구현하면 left는 작은값 , right는 큰값이 들어가 Traversal를 하면 오름차순으로 tree 구성
     }
      */
-    @Override
-    public int compare(Member member1, Member member2) { //CompareTo는 매개변수가 하나여서 나랑 비교 / compare은 매개변수 2개가 넘어와 하나는 나, 하나는 비교대상이다.
-        return (member1.memberId - member2.memberId); //앞에꺼에서 뒤에껄 뺀게 더 크다 (올림차순)
-        //return (member2.memberId - member1.memberId); // 내림차순
-    }
-}
