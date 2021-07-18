@@ -18,7 +18,7 @@ public class FileOutputStreamTest2 {
             for(int i = 0; i <bs.length; i++ ) {
                 bs[i] = data++;
             }
-            fos.write(bs); 
+            fos.write(bs);
         } catch (IOException e) { //write() Exception도 IOException
             System.out.println(e);
         }
